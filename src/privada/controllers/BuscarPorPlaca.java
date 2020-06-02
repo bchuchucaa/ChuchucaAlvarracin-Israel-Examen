@@ -43,6 +43,8 @@ public class BuscarPorPlaca extends HttpServlet {
 		ve1.setPlaca(placa);
 		VehiculoDAO vdao =DAOFactory.getFactory().getVehiculoDAO();
 		Vehiculo vehiculo= vdao.recuperarPorPlaca(ve1);
+		
+		Cliente cliente = vehiculo.getCliente();
 		TicketDAO ticketdao= DAOFactory.getFactory().getTicketDAO();
 		Ticket tik= new Ticket();
 		tik.setVehiculo(vehiculo);
@@ -51,7 +53,8 @@ public class BuscarPorPlaca extends HttpServlet {
 		System.out.println(tickets.toString());
 		
 		try {
-			request.setAttribute("vehiculo", vehiculo);
+			request.setAttribute("cliente", cliente);
+			request.setAttribute("vehiculo",vehiculo);
 			request.setAttribute("tickets", tickets);
 			url="/JSPs/buscar.jsp";
 		}catch (Exception e) {
