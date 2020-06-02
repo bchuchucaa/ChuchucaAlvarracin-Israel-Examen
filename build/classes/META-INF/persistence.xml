@@ -3,6 +3,9 @@
 	<persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
 	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>privada.entidad.Cliente</class>
+		<class>privada.entidad.Vehiculo</class>
+		<class>privada.entidad.Ticket</class>
 
 		<properties>
 	
