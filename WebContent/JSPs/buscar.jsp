@@ -20,7 +20,7 @@
  
 <form action="/ChuchucaAlvarracin-Israel-Examen/Buscar" autocomplete="off">
     <fieldset class="url">
-      <input id="url" type="text" name="usuario" onkeypress="return numeros(this)" minlength="10" maxlength="10" required>
+      <input id="url" type="text" name="usuario" required>
       <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Ingrese cedula</label>
       <div class="after"></div>
     </fieldset>
@@ -32,6 +32,8 @@
 
 <br><br><br><br><br><br>
 <c:set var="p1" value="${requestScope['telefonos']}" />
+		TUS DATOS<br> Id: ${cliente.cedula}<br> Nombre: ${cliente.nombre}<br>
+	
 
 		<table class=container>
 				<tr>

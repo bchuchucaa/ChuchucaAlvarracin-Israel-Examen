@@ -66,7 +66,7 @@ public class Buscar extends HttpServlet {
 		}
 
 		try {
-			//request.setAttribute("userexistente", userexistente);
+			request.setAttribute("cliente", cliente);
 			request.setAttribute("tickets", tickets);
 			url="/JSPs/buscar.jsp";
 		}catch (Exception e) {
