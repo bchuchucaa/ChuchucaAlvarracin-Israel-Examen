@@ -10,13 +10,13 @@ import privada.dao.VehiculoDAO;
 public class JPADAOFactory  extends DAOFactory{
 
 	@Override
-	public ClienteDAO getUsuarioDAO() {
+	public ClienteDAO getClienteDAO() {
 		// TODO Auto-generated method stub
 		return new JPAClienteDAO();
 	}
 
 	@Override
-	public VehiculoDAO getTelefonoDAO() {
+	public VehiculoDAO getVehiculoDAO() {
 		// TODO Auto-generated method stub
 		return new JPAVehiculoDAO();
 	}
