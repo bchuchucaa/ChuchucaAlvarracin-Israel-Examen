@@ -18,19 +18,19 @@ public class Ticket implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int numero;
-	private Timestamp fechahoraingreso;
-	private Timestamp fechahorasalida;
+	private String fechahoraingreso;
+	private String fechahorasalida;
 	@OneToOne
 	private Vehiculo vehiculo;
 	public Ticket() {
 		super();
 	}
-	public Ticket(int numero, Timestamp fechahoraingreso, Timestamp fechahorasalida, Vehiculo vehicuo) {
+	public Ticket(int numero, String fechahoraingreso, String fechahorasalida, Vehiculo vehiculo) {
 		super();
 		this.numero = numero;
 		this.fechahoraingreso = fechahoraingreso;
 		this.fechahorasalida = fechahorasalida;
-		this.vehiculo = vehicuo;
+		this.vehiculo = vehiculo;
 	}
 	public int getNumero() {
 		return numero;
@@ -38,23 +38,23 @@ public class Ticket implements Serializable {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-	public Timestamp getFechahoraingreso() {
+	public String getFechahoraingreso() {
 		return fechahoraingreso;
 	}
-	public void setFechahoraingreso(Timestamp fechahoraingreso) {
+	public void setFechahoraingreso(String fechahoraingreso) {
 		this.fechahoraingreso = fechahoraingreso;
 	}
-	public Timestamp getFechahorasalida() {
+	public String getFechahorasalida() {
 		return fechahorasalida;
 	}
-	public void setFechahorasalida(Timestamp fechahorasalida) {
+	public void setFechahorasalida(String fechahorasalida) {
 		this.fechahorasalida = fechahorasalida;
 	}
-	public Vehiculo getVehicuo() {
+	public Vehiculo getVehiculo() {
 		return vehiculo;
 	}
-	public void setVehicuo(Vehiculo vehicuo) {
-		this.vehiculo = vehicuo;
+	public void setVehiculo(Vehiculo vehiculo) {
+		this.vehiculo = vehiculo;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;

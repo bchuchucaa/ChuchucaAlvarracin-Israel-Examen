@@ -6,6 +6,9 @@ import java.util.List;
 
 import javax.persistence.*;
 
+
+@NamedQuery(name = "buscarPorId", query = "SELECT u FROM Cliente u WHERE u.cedula = :id")
+
 /**
  * Entity implementation class for Entity: Cliente
  *

@@ -69,7 +69,7 @@ function soloLetras(e) {
 	</nav>
 </header>
 <br><br>
-<form action="/ChuchucaAlvarracin-Israel-Examen/RegistroController" method="get" id="registro">
+<form action="/ChuchucaAlvarracin-Israel-Examen/ServletTicket" method="get" id="registro">
 <div class="limiter">
 		<div class="container-login100" style="background-image: url('/ChuchucaAlvarracin-Israel-Examen/img/bg-01.jpg');">
 			<div class="wrap-login100 p-t-30 p-b-50">
@@ -78,17 +78,17 @@ function soloLetras(e) {
 				</span>
 				<form class="login100-form validate-form p-b-33 p-t-5">
 					<div class="wrap-input100 validate-input" data-validate = "Ingrese fecha y hora de ingreso">
-						<input class="input100" type="text" id="cedula" minlength="10" maxlength="10" onkeyup="return numeros(this)" name="fechaingreso" placeholder="fecha y hora de ingreso" required>
+						<input class="input100" type="text" id="cedula" minlength="10" maxlength="10" name="fechaingreso" placeholder="fecha y hora de ingreso" required>
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Ingrese fecha y hora de salida">
-						<input class="input100" type="text" name="fechasalida" onkeypress="return soloLetras(event)" placeholder="fecha y hora de salida" required>
+						<input class="input100" type="text" name="fechasalida"  placeholder="fecha y hora de salida" required>
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 					<h1>Vehiculo</h1>
 					<div class="wrap-input100 validate-input" data-validate="Ingrese la placa del vehiculo">
-						<input class="input100" type="text" onkeypress="return soloLetras(event)" name="placa" placeholder="ingresa la placa" required>
+						<input class="input100" type="text" name="placa" placeholder="ingresa la placa" required>
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 					
