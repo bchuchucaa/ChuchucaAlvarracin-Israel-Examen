@@ -18,7 +18,7 @@
 </header>
 <br><br>
  
-<form action="/JPADAOProyecto1/BuscarUsuario" autocomplete="off">
+<form action="/ChuchucaAlvarracin-Israel-Examen/Buscar" autocomplete="off">
     <fieldset class="url">
       <input id="url" type="text" name="usuario" onkeypress="return numeros(this)" minlength="10" maxlength="10" required>
       <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Ingrese cedula</label>

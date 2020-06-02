@@ -21,7 +21,7 @@
 <form action="/JPADAOProyecto1/BuscarUsuario" autocomplete="off">
     <fieldset class="url">
       <input id="url" type="text" name="usuario" onkeypress="return numeros(this)" minlength="10" maxlength="10" required>
-      <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Ingrese cedula</label>
+      <label for="url"><i class="fa fa-search" aria-hidden="true"></i> Ingrese cedula para buscar Tickets</label>
       <div class="after"></div>
     </fieldset>
     <fieldset class="enter">

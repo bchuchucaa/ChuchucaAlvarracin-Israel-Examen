@@ -13,12 +13,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import privada.dao.ClienteDAO;
 import privada.dao.DAOFactory;
-import privada.dao.TelefonoDAO;
-import privada.dao.UsuarioDAO;
+
+import privada.dao.TicketDAO;
+
 import privada.dao.VehiculoDAO;
 import privada.entidad.Cliente;
-import privada.entidad.Telefono;
-import privada.entidad.Usuario;
+
+import privada.entidad.Ticket;
+
 import privada.entidad.Vehiculo;
 
 /**
@@ -48,7 +50,31 @@ public class Buscar extends HttpServlet {
 		VehiculoDAO vdao =DAOFactory.getFactory().getVehiculoDAO();
 		Vehiculo vehiculo= new Vehiculo();
 		vehiculo.setCliente(cliente);
-		vdao.recuperarVehiculos(vehiculo);
+		TicketDAO tiketdao= DAOFactory.getFactory().getTicketDAO();
+		List<Ticket>tickets= new ArrayList<Ticket>();
+		
+		for (Vehiculo v :vdao.recuperarVehiculos(vehiculo)) {
+			Ticket ticket = new Ticket();
+			ticket.setVehiculo(v);
+			List<Ticket>ticketsre= new ArrayList<Ticket>();
+			ticketsre=tiketdao.recuperarTickets(ticket);
+			
+			for (Ticket ticket2 : ticketsre) {
+				tickets.add(ticket2);
+			}
+			
+		}
+
+		try {
+			//request.setAttribute("userexistente", userexistente);
+			request.setAttribute("tickets", tickets);
+			url="/JSPs/buscar.jsp";
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("algo salio mal");
+		}
+
+		getServletContext().getRequestDispatcher(url).forward(request, response);
 		
 		
 	}
