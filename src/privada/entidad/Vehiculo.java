@@ -3,6 +3,9 @@ package privada.entidad;
 import java.io.Serializable;
 import javax.persistence.*;
 
+
+@NamedQuery(name = "recuperarVehiculos", query = "SELECT u FROM Vehiculo u WHERE u.cliente = :cliente")
+@NamedQuery(name = "recuperarPorPlaca", query = "SELECT u FROM Vehiculo u WHERE u.placa = :placa")
 /**
  * Entity implementation class for Entity: Vehiculo
  *

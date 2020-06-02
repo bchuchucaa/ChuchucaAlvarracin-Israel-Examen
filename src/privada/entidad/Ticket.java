@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 import com.sun.jmx.snmp.Timestamp;
 
+@NamedQuery(name = "recuperarTickets", query = "SELECT u FROM Ticket u WHERE u.vehiculo = :vehiculo")
 /**
  * Entity implementation class for Entity: Ticket
  *
