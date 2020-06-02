@@ -52,6 +52,7 @@ public class Buscar extends HttpServlet {
 		vehiculo.setCliente(cliente);
 		TicketDAO tiketdao= DAOFactory.getFactory().getTicketDAO();
 		List<Ticket>tickets= new ArrayList<Ticket>();
+	
 		
 		for (Vehiculo v :vdao.recuperarVehiculos(vehiculo)) {
 			Ticket ticket = new Ticket();
