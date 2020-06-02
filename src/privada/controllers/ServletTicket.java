@@ -11,6 +11,8 @@ import com.sun.jmx.snmp.Timestamp;
 
 import privada.dao.ClienteDAO;
 import privada.dao.DAOFactory;
+import privada.dao.TicketDAO;
+import privada.dao.VehiculoDAO;
 import privada.entidad.Cliente;
 import privada.entidad.Ticket;
 import privada.entidad.Vehiculo;
@@ -45,6 +47,14 @@ public class ServletTicket extends HttpServlet {
 		ClienteDAO clienteDAO = DAOFactory.getFactory().getClienteDAO();
 		Cliente cliente=clienteDAO.buscarPorId(cedula);
 		System.out.println(cliente.toString());
+		Vehiculo vehiculo = new Vehiculo(placa,marca,modelo,cliente);
+		VehiculoDAO vehiculoDAO= DAOFactory.getFactory().getVehiculoDAO();
+		vehiculoDAO.create(vehiculo);
+		System.out.println(vehiculo.toString());
+		Ticket ticket = new Ticket(0,fechaingreso,fechasalida,vehiculo);
+		TicketDAO ticketDAO= DAOFactory.getFactory().getTicketDAO();
+		ticketDAO.create(ticket);
+		System.out.println(ticket.toString());
 		
 	}
 

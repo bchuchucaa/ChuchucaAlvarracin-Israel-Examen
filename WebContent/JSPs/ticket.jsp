@@ -78,7 +78,7 @@ function soloLetras(e) {
 				</span>
 				<form class="login100-form validate-form p-b-33 p-t-5">
 					<div class="wrap-input100 validate-input" data-validate = "Ingrese fecha y hora de ingreso">
-						<input class="input100" type="text" id="cedula" minlength="10" maxlength="10" name="fechaingreso" placeholder="fecha y hora de ingreso" required>
+						<input class="input100" type="text" id="cedula"  name="fechaingreso" placeholder="fecha y hora de ingreso" required>
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
@@ -97,12 +97,12 @@ function soloLetras(e) {
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate="Ingrese el modelo del vehiculo">
-						<input class="input100" type="text" name="modelo" minlength="8" placeholder="Elija el modelo" required>
+						<input class="input100" type="text" name="modelo" placeholder="Elija el modelo" required>
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 					<h1>Cliente</h1>
 						<div class="wrap-input100 validate-input" data-validate="Ingrese la cedula del cliente">
-						<input class="input100" type="text" name="cedula" minlength="8" placeholder="Elija su cedula" required>
+						<input class="input100" type="text" name="cedula"  placeholder="Elija su cedula" required>
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 			
