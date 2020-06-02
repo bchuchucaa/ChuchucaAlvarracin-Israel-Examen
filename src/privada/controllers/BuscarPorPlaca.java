@@ -51,7 +51,7 @@ public class BuscarPorPlaca extends HttpServlet {
 		System.out.println(tickets.toString());
 		
 		try {
-			//request.setAttribute("userexistente", userexistente);
+			request.setAttribute("vehiculo", vehiculo);
 			request.setAttribute("tickets", tickets);
 			url="/JSPs/buscar.jsp";
 		}catch (Exception e) {

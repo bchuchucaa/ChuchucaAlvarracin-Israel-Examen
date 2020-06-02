@@ -34,7 +34,7 @@
 <c:set var="p1" value="${requestScope['telefonos']}" />
 		TUS DATOS<br> Id: ${cliente.cedula}<br> Nombre: ${cliente.nombre}<br>
 	
-
+		DATOS VEHICULO<br> Id: ${vehiculo.placa}<br> Nombre: ${vehiculo.marca}<br>Modelo: ${vehiculo.modelo}<br>
 		<table class=container>
 				<tr>
 					<td>fecha ingreso</td>
